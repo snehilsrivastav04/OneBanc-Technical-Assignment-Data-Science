@@ -10,11 +10,6 @@ def is_common_mpin(mpin):
         "1997", "1999", "0001", "0002", "0003", "0004", "0005", "0006", "0007", "0008",
         "0009", "0101", "0202", "0303", "0404", "0505", "0606", "0707", "0808", "0909",
         "1010", "1111", "1212", "1313", "1414", "1515", "1616", "1717", "1818", "1919",
-        "2020", "2121", "2222", "2323", "2424", "2525", "2626", "2727", "2828", "2929",
-        "3030", "3131", "3232", "3333", "3434", "3535", "3636", "3737", "3838", "3939",
-        "4040", "4141", "4242", "4343", "4444", "4545", "4646", "4747", "4848", "4949",
-        "5050", "5151", "5252", "5353", "5454", "5555", "5656", "5757", "5858", "5959",
-        "6060", "6161", "6262", "6363", "6464", "6565", "6666", "6767", "6868", "6969",
         "7070", "7171", "7272", "7373", "7474", "7575", "7676", "7777", "7878", "7979",
         "8080", "8181", "8282", "8383", "8484", "8585", "8686", "8787", "8888", "8989",
         "9090", "9191", "9292", "9393", "9494", "9595", "9696", "9797", "9898", "9999",
@@ -85,7 +80,7 @@ def get_date_input(prompt):
         except ValueError:
             print("Invalid date format. Please use YYYY-MM-DD")
             
-# Get MPIN input
+
 while True:
     mpin = input("Enter your 4 or 6 digit MPIN: ")
     if mpin.isdigit() and (len(mpin) == 4 or len(mpin) == 6):
@@ -107,7 +102,7 @@ if input("Do you want to enter your spouse's date of birth? (yes/no): ").lower()
 if input("Do you want to enter your anniversary date? (yes/no): ").lower() == "yes":
     anniversary = get_date_input("Enter anniversary date")
 
-# Check MPIN strength and display results
+
 result = check_mpin_strength(mpin, dob_self, dob_spouse, anniversary)
 
 print(f"MPIN Strength: {result['strength']}")
