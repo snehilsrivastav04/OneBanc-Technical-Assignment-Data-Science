@@ -20,3 +20,14 @@ pip install pytest
 and after this run
 !pytest C:/Users/snehi/Downloads/bnac/test_mpin.py -v 
 to evaluate the file.
+    Checks the strength of an MPIN based on common patterns and demographic data.
+  
+Parameters:
+- mpin (str): The MPIN to be checked.
+- birth_year_self (str): The user's birth year.
+- birth_year_spouse (str): The spouse's birth year.
+- anniversary_year (str): The wedding anniversary year.
+
+Returns:
+- dict: A dictionary with MPIN strength and reasons for weakness (if any).
+  
